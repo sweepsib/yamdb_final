@@ -9,6 +9,7 @@ class IsAdminOrReadOnly(permissions.BasePermission):
             return request.user.is_admin
         return False
 
+
 class IsAuthorOrAdminOrModeratorOrReadOnly(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         if request.method == 'GET':
@@ -20,6 +21,7 @@ class IsAuthorOrAdminOrModeratorOrReadOnly(permissions.BasePermission):
                 obj.author == request.user or request.user.is_staff
             )
         return False
+
 
 class IsAuthReadOnly(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
