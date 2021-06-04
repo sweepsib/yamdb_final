@@ -14,13 +14,13 @@ from rest_framework.viewsets import GenericViewSet, ModelViewSet
 
 from .filters import TitleFilter
 from .models import Category, Genre, Review, Title, User
-from .permissions import (
-    IsAdminOrReadOnly, IsAuthorOrAdminOrModeratorOrReadOnly, IsAuthReadOnly,
-    IsStaffOnly)
-from .serializers import (
-    CallbackTokenAuthSerializer, CategorySerializer, CommentSerializer,
-    GenreSerializer, ReviewSerializer, TitleCreateUpdateSerializer,
-    TitleListSerializer, UserProfileSerializer)
+from .permissions import (IsAdminOrReadOnly,
+                          IsAuthorOrAdminOrModeratorOrReadOnly, IsAuthReadOnly,
+                          IsStaffOnly)
+from .serializers import (CallbackTokenAuthSerializer, CategorySerializer,
+                          CommentSerializer, GenreSerializer, ReviewSerializer,
+                          TitleCreateUpdateSerializer, TitleListSerializer,
+                          UserProfileSerializer)
 from .utils import get_tokens_for_user
 
 

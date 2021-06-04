@@ -2,9 +2,8 @@ from django.urls import include, path
 from drfpasswordless.views import ObtainEmailCallbackToken
 from rest_framework.routers import DefaultRouter
 
-from .views import (
-    CategoryViewSet, CommentViewSet, GenreViewSet, ObtainToken, ReviewViewSet,
-    TitleViewSet, UserViewSet)
+from .views import (CategoryViewSet, CommentViewSet, GenreViewSet, ObtainToken,
+                    ReviewViewSet, TitleViewSet, UserViewSet)
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet, basename='users')
